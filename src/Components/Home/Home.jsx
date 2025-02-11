@@ -1,11 +1,12 @@
-import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useLoaderData, useOutletContext } from 'react-router-dom';
 import JobCategory from '../JobCategory/JobCategory';
 import Job from '../Job/Job';
 
 const Home = () => {
+    // const [jobs, setJobs] = useState(); 
     const { categories, jobs } = useLoaderData();
-    console.log(categories);
+    const { featuredJobsRef } = useOutletContext()
     return (
         <div className=''>
             <section className='bg-linear-to-r from-[#7e8ffe15] to-[#9873ff14]'>
@@ -34,7 +35,7 @@ const Home = () => {
                     }
                 </div>
             </section>
-            <section className='mb-10 max-w-[1200px] mx-auto px-6'>
+            <section ref={featuredJobsRef} className='mb-10 max-w-[1200px] mx-auto px-6'>
                 <div className='flex flex-col items-center'>
                     <h2 className='text-4xl font-bold mb-2'>Featured Jobs</h2>
                     <p className='text-sm'>Explore thousands of job opportunities with all the information you need. Its your future</p>

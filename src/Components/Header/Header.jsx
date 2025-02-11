@@ -2,7 +2,7 @@ import React from 'react';
 import ActiveLink from '../ActiveLink/ActiveLink';
 import { Link } from 'react-router-dom';
 
-const Header = ({ to }) => {
+const Header = ({ to, scrollToFeaturedJobs }) => {
     return (
         <div className='bg-linear-to-r from-[#7e8ffe15] to-[#9873ff14]'>
             <div className='flex justify-between items-center max-w-[1200px] mx-auto px-6 py-10'>
@@ -22,8 +22,8 @@ const Header = ({ to }) => {
                     </ActiveLink>
                 </div>
 
-                <Link className="mr-20" to="/statistics_apply-now">
-                    <button className='text-md px-6 py-3 text-white font-bold rounded-lg hover:bg-[#9873FF] bg-[#7E90FE]'>Start Applying</button>
+                <Link className="mr-10">
+                    <button onClick={scrollToFeaturedJobs} className='text-md px-6 py-3 text-white font-bold rounded-lg hover:bg-[#9873FF] bg-[#7E90FE]'>Start Applying</button>
                 </Link>
             </div>
         </div>
