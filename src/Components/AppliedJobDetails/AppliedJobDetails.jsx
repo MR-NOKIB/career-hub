@@ -7,7 +7,7 @@ const AppliedJobDetails = ({ job }) => {
         <div className='max-w-[1200px] mx-auto px-6 mt-24'>
             <div className='border border-gray-300 rounded-lg p-10 mb-10 md:flex items-center justify-between'>
                 <div className='md:flex items-center justify-between gap-6'>
-                    <div className=' bg-gray-300 h-[240px]  w-[240px] md:flex content-center items-center justify-center rounded-lg'>
+                    <div className=' bg-gray-300 h-[240px]  w-[240px] md:flex md:flex-col flex flex-row content-center items-center justify-center rounded-lg'>
                         <img className='object-contain w-[150px] h' src={logo} alt="" />
                     </div>
                     <div>
