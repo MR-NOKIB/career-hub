@@ -39,7 +39,7 @@ const Statistics = () => {
                 </PieChart>
                 <div className='border-2 border-blue-200 p-20 rounded-md'>
                     <h6 className='font-bold'>Assignments Marks Analysis</h6>
-                    <p>Assignments Running: <span className='font-semibold'>{assignments.length}</span></p>
+                    <p>Assignments Running: <span className='font-semibold'>{assignments.length + 1}</span></p>
                     <p>Assignments Completed: <span className='font-semibold'>8</span></p>
                     <p>Average Marks: <span className='font-semibold'>{averageMarks}</span></p>
                 </div>
